@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Message from "./components/message/message";
 import Sidebar from "./components/sidebar/Sidebar";
-import User from "./components/user/user";
+import { Users } from "./components/user/users";
 
 function App(props) {
   return (
@@ -13,13 +13,12 @@ function App(props) {
           <Sidebar infoSidebar={props.infoSidebar} />
         </div>
         <div className="">
-          <User info={props.info} />
+          <Users />
         </div>
         <div className="sm:grid hidden bg-light-bg w-screen min-h-screen dark:bg-dark-bg items-end">
           <Message message = {props.message} />
         </div>
       </div>
-      <Routes></Routes>
     </BrowserRouter>
   );
 }

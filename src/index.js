@@ -6,6 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
+/*
 let info = [
   {
     avatar:
@@ -44,6 +45,7 @@ let info = [
     name: "Ustoz-shogird",
   },
 ];
+*/
 
 let infoSidebar = [
   { message: "All messages", url: "/" },
@@ -69,7 +71,7 @@ let message =[
 
 root.render(
   <React.StrictMode>
-    <App info={info} infoSidebar={infoSidebar} message={message} />
+    <App /*info={info}*/ infoSidebar={infoSidebar} message={message} />
   </React.StrictMode>
 );
 
