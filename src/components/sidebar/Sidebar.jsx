@@ -5,9 +5,8 @@ import useDarkMode from "../../hook/useDarkMode";
 import Bar from "./bars/bar";
 
 const Sidebar = (props) => {
-  
   const [colorTheme, setTheme] = useDarkMode();
-  let SidebarInfo = props.infoSidebar.map((elements) => (
+  let SidebarInfo = props.state.infoSidebar.map((elements) => (
     <Bar message={elements.message} url={elements.url} />
   ));
 

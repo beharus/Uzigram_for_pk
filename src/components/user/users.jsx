@@ -10,10 +10,10 @@ const Users = (props) => {
     <>
       <Routes>
         <Route path="/" element={<Mains />}>
-          <Route index element={<All />} />
-          <Route path="personal" element={<Personals />} />
-          <Route path="groups" element={<Groups />} />
-          <Route path="channels" element={<Channels />} />
+          <Route index element={<All state = {props.state.user } />} />
+          <Route path="personal" element={<Personals state = {props.state.user.personals }  />} />
+          <Route path="groups" element={<Groups state = {props.state.user.groups }  />} />
+          <Route path="channels" element={<Channels state = {props.state.user.channels }  />} />
         </Route>
       </Routes>
     </>

@@ -1,9 +1,12 @@
 import { User } from "./user/user";
 
 const Groups = (props) => {
+  let AllInfo = props.state.map((elements) => (
+    <User url={elements.url} avatar={elements.avatar} name = {elements.name} />
+  ));
   return (
     <>
-    <User url = '5' avatar="https://pbs.twimg.com/profile_images/378800000472427846/078357e2698399791383e11d9197e834.jpeg" name='9A-class' />
+    {AllInfo}
     </>
   );
 };
