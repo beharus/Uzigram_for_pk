@@ -17,7 +17,7 @@ function App(props) {
         </div>
       </div>
         <div className="sm:grid hidden pl-[80px] sm:pl-[400px] lg:pl-[480px] bg-light-bg w-auto min-h-screen dark:bg-dark-bg">
-          <Message state={props.state} />
+          <Message state={props.state} newPostElement={props.newPostElement} />
         </div>
     </BrowserRouter>
   );

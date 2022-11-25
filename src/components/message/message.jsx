@@ -1,5 +1,6 @@
 import React from "react";
 import { HeaderElement } from "./header/headerElement";
+import { Input } from "./input.jsx/input";
 import MessageItem from "./messageItem/messageItem";
 
 const Message = (props) => {
@@ -10,7 +11,8 @@ const Message = (props) => {
   return (
     <>
     <HeaderElement />
-      <div className=" self-end">{message}</div>
+      <div className=" self-end">{message}<Input newPostElement={props.newPostElement} /></div>
+      
     </>
   );
 };

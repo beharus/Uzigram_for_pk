@@ -1,3 +1,5 @@
+import { rerender } from "./render";
+
 let state = {
   sidebar: {
     infoSidebar: [
@@ -79,5 +81,19 @@ let state = {
     ],
   },
 };
+
+
+debugger
+export let addPost = (a) => {
+  let newPost = {
+    avatar: "https://static2.tgstat.ru/channels/_0/9f/9f91866fed044703e3a6b673ed0c470a.jpg",
+    message: a
+
+  }
+  state.messages.message.push(newPost)
+  rerender(state)
+}
+
+
 
 export default state;
